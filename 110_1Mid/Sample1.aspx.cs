@@ -16,8 +16,6 @@ namespace _110_1Mid {
                 hd_Num.Value = mt_2MD5(code);
 
                 
-               
-
             }
 
             string list = "";
