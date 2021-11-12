@@ -27,9 +27,11 @@
             <asp:ListItem>否</asp:ListItem>
             <asp:ListItem>是</asp:ListItem>
         </asp:RadioButtonList>
-        <asp:TextBox ID="TextBox1" runat="server" Visible="False"></asp:TextBox><br />
+        <asp:TextBox ID="tb_Des" runat="server" Visible="False"></asp:TextBox><br />
 
-        <asp:Button ID="btn_Submit" runat="server" Text="送出" OnClick="btn_Submit_Click" />
+        <asp:Button ID="btn_Submit" runat="server" Text="送出" OnClick="btn_Submit_Click" /><br />
+
+        <asp:Label ID="lb_Msg" runat="server" Text=""></asp:Label>
 
 
 

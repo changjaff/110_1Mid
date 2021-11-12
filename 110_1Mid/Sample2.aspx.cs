@@ -8,6 +8,14 @@ using System.Web.UI.WebControls;
 namespace _110_1Mid {
     public partial class Sample2 : System.Web.UI.Page {
         protected void Page_Load(object sender, EventArgs e) {
+            if (IsPostBack == false)
+            {
+                st_con(true);
+                string psnum = mt_GenVeriStr();
+                lb_Id.Text = psnum;
+
+            }
+
 
         }
 
@@ -22,33 +30,112 @@ namespace _110_1Mid {
             return s_Res;
         }
 
-        protected void ddl_Type_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
 
         protected void ddl_Type_SelectedIndexChanged1(object sender, EventArgs e)
         {
-
+            st_con(true);
         }
 
         protected void ddl_ZoneCode_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            st_con();
         }
 
         protected void btn_Submit_Click(object sender, EventArgs e)
         {
+            lb_Msg.Text += lb_Id.Text + "<br/>";
+            lb_Msg.Text += ddl_Type.Text + "<br/>";
+            lb_Msg.Text += ddl_ZoneCode.Text ;
+            lb_Msg.Text += tb_Number.Text + "<br/>";
+            lb_Msg.Text += ddl_City.Text +tb_Add.Text + "<br/>";
+            lb_Msg.Text += tb_Des.Text  + "<br/>";
+
 
         }
 
-        protected void TextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         protected void rb_Des_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if(rb_Des.SelectedValue == "是")
+            {
+                tb_Des.Visible = true;
+            }
+            else
+            {
+                tb_Des.Visible = false;
+            }
+        }
+
+        public void st_con(bool ans = false)
+        {
+            if(ans == true)
+            {
+                ddl_ZoneCode.Items.Clear();
+                if (ddl_Type.SelectedValue == "手機")
+                {
+                    ListItem o_I = new ListItem("0911", "0911");
+                    ddl_ZoneCode.Items.Add(o_I);
+                    o_I = new ListItem("0921", "0921");
+                    ddl_ZoneCode.Items.Add(o_I);
+                    o_I = new ListItem("0960", "0960");
+                    ddl_ZoneCode.Items.Add(o_I);
+
+                }
+                else
+                {
+                    ListItem o_I = new ListItem("02", "02");
+                    ddl_ZoneCode.Items.Add(o_I);
+                    o_I = new ListItem("04", "04");
+                    ddl_ZoneCode.Items.Add(o_I);
+                    o_I = new ListItem("07", "07");
+                    ddl_ZoneCode.Items.Add(o_I);
+                }
+            }
+
+            ddl_City.Items.Clear();
+
+            switch (ddl_ZoneCode.SelectedValue)
+            {
+
+                case "0911":
+                case "0921":
+                case "0960":
+                    ListItem o_I = new ListItem("台北市", "台北市");
+                    ddl_City.Items.Add(o_I);
+                    o_I = new ListItem("新北市", "新北市");
+                    ddl_City.Items.Add(o_I);
+                    o_I = new ListItem("台中市", "台中市");
+                    ddl_City.Items.Add(o_I);
+                    o_I = new ListItem("台中縣", "台中縣");
+                    ddl_City.Items.Add(o_I);
+                    o_I = new ListItem("高雄市", "高雄市");
+                    ddl_City.Items.Add(o_I);
+                    o_I = new ListItem("高雄縣", "高雄縣");
+                    ddl_City.Items.Add(o_I);
+
+                    break;
+
+                case "02":
+                    ListItem o_I2 = new ListItem("台北市", "台北市");
+                    ddl_City.Items.Add(o_I2);
+                    o_I2 = new ListItem("新北市", "新北市");
+                    ddl_City.Items.Add(o_I2);
+                    break;
+                case "04":
+                    ListItem o_I3 = new ListItem("台中市", "台中市");
+                    ddl_City.Items.Add(o_I3);
+                    o_I3 = new ListItem("台中縣", "台中縣");
+                    ddl_City.Items.Add(o_I3);
+                    break;
+                case "07":
+                    ListItem o_I4 = new ListItem("高雄市", "高雄市");
+                    ddl_City.Items.Add(o_I4);
+                    o_I4 = new ListItem("高雄縣", "高雄縣");
+                    ddl_City.Items.Add(o_I4);
+                    break;
+            }
+
 
         }
     }
