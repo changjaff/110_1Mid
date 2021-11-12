@@ -13,7 +13,7 @@ namespace _110_1Mid {
 
                 string code = mt_GenVeriStr();
                 mt_ImgPointer(ref ig_Num, code);
-                hd_Num.Value = code;
+                hd_Num.Value = mt_2MD5(code);
 
 
         }

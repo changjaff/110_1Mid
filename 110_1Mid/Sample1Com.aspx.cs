@@ -9,6 +9,24 @@ namespace _110_1Mid {
     public partial class Sample1Com : System.Web.UI.Page {
         protected void Page_Load(object sender, EventArgs e) {
 
+            Ib_Msg.Text += Request.Form.Get("tb_Id") + "<br/>";
+            Ib_Msg.Text += Request.Form.Get("tb_Ps") + "<br/>";
+
+            Ib_Msg.Text += Request.Form.Get("cl_Inter") + "<br/>";
+
+            Ib_Msg.Text += Request.Form.Get("tb_Num") + "<br/>";
+            Ib_Msg.Text += Request.Form.Get("hd_Num") + "<br/>";
+
+            
+            Ib_Msg.Text += mt_2MD5(Request.Form.Get("tb_Num"));
+
+
+
+
+
+
+
+
         }
 
         // To convert a plain-text string into a md5 string

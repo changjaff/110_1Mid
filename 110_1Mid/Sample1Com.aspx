@@ -9,8 +9,8 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-        </div>
+        <asp:Label ID="Ib_Msg" runat="server" Text=""></asp:Label>
+
     </form>
 </body>
 </html>
