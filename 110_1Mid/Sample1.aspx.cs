@@ -9,11 +9,27 @@ namespace _110_1Mid {
     public partial class Sample1 : System.Web.UI.Page {
         protected void Page_Load(object sender, EventArgs e) {
 
-
-
+            if(IsPostBack == false)
+            {
                 string code = mt_GenVeriStr();
                 mt_ImgPointer(ref ig_Num, code);
                 hd_Num.Value = mt_2MD5(code);
+
+                
+               
+
+            }
+
+            string list = "";
+            int i;
+            for (i = 0; i < cl_Inter.Items.Count; i++)
+            {
+                if (cl_Inter.Items[i].Selected)
+                {
+                    list += cl_Inter.Items[i].Value + "/n";
+                }
+            }
+
 
 
         }
@@ -72,6 +88,11 @@ namespace _110_1Mid {
                 .Replace("-", String.Empty)
                 .ToUpper();
             return s_Md5;
+        }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+            
         }
     }
 }
