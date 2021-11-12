@@ -92,7 +92,10 @@ namespace _110_1Mid {
 
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
-            
+
+            tb_Ps.TextMode = TextBoxMode.SingleLine;
+
+
         }
     }
 }

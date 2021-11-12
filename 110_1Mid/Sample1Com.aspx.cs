@@ -13,21 +13,13 @@ namespace _110_1Mid {
             Ib_Msg.Text += Request.Form.Get("tb_Ps") + "<br/>";
 
 
-            Ib_Msg.Text += Request.Form.Get("list") + "<br/>";
+            Ib_Msg.Text += Request.Form.Get("cl_Inter.Items[i].Value +") + "<br/>";
 
             Ib_Msg.Text += Request.Form.Get("tb_Num") + "<br/>";
             Ib_Msg.Text += Request.Form.Get("hd_Num") + "<br/>";
 
             
             Ib_Msg.Text += mt_2MD5(Request.Form.Get("tb_Num"));
-
-
-
-
-
-
-
-
 
 
 
