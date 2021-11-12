@@ -21,5 +21,35 @@ namespace _110_1Mid {
             }
             return s_Res;
         }
+
+        protected void ddl_Type_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void ddl_Type_SelectedIndexChanged1(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void ddl_ZoneCode_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btn_Submit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void rb_Des_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
