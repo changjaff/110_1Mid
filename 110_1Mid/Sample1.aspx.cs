@@ -94,6 +94,7 @@ namespace _110_1Mid {
         {
 
             tb_Ps.TextMode = TextBoxMode.SingleLine;
+            ImageButton1.ImageUrl = "~/eye-solid.svg";
 
 
         }
