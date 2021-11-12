@@ -27,7 +27,7 @@
         <asp:Label ID="Label5" runat="server" Text="認證碼" Font-Size="X-Large"></asp:Label>
         <asp:TextBox ID="tb_Num" runat="server" Height="15px" Width="50px" ></asp:TextBox>
         <asp:Image ID="ig_Num" runat="server" />
-        <asp:Label ID="hd_Num" runat="server" Text="" ></asp:Label><br />
+        <asp:HiddenField ID="hd_Num" runat="server" /><br />
         <asp:Button ID="btn_Submit" runat="server" Text="送出" PostBackUrl="~/Sample1Com.aspx" Height="30px" Width="80px" />
 
 
